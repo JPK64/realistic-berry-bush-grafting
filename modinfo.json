@@ -1,0 +1,13 @@
+{
+	"type": "content",
+	"name": "Realistic Berry Bush Grafting",
+	"version": "0.1.0",
+	"description": "Implements a realistic process for combining the traits of berry bush cuttings",
+	"modID": "realistic-berry-bush-grafting",
+	"authors": [
+		"JPK64"
+	],
+	"dependencies": {
+		"game": "*"
+	}
+}
