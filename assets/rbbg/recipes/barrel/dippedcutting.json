@@ -1,0 +1,20 @@
+{
+	"ingredients": [
+		{
+			"type": "item",
+			"code": "game:weaktanninportion",
+			"litres": 0.5
+		},
+		{
+			"type": "item",
+			"code": "graftedcutting-*",
+			"quantity": 1,
+			"name": "fruit"
+		}
+	],
+	"output": {
+		"type": "item",
+		"code": "dippedcutting-{fruit}",
+		"stackSize": 1
+	}
+}
