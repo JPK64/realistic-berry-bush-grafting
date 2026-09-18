@@ -28,14 +28,17 @@
 	"transitionableProps": [
 		{
 			"type": "Dry",
+			"freshHours": {
+				"avg": 0
+			},
 			"transitionHours": {
 				"avg": 168
 			},
 			"transitionedStack": {
 				"type": "block",
-				"code": "game:fruitingbushcutting-{fruit}"
+				"code": "game:fruitingbushcutting-{fruit}-free"
 			},
-			"transitionRatio": 0.25
+			"transitionRatio": 1
 		}
 	],
 	"shape": {
