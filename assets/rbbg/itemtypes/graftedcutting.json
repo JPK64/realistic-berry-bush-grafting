@@ -53,10 +53,10 @@
 				"base": "game:block/plant/berrybush/cuttings/currant-stem2"
 			},
 			"northTinted1": {
-				"base": "rbbg:graftedcutting/currant-leaves1"
+				"base": "graftedcutting/currant-leaves1"
 			},
 			"southTinted1": {
-				"base": "rbbg:graftedcutting/currant-leaves2"
+				"base": "graftedcutting/currant-leaves2"
 			}
 		},
 		"*": {
@@ -67,10 +67,10 @@
 				"base": "game:block/plant/berrybush/cuttings/{type}-stem2"
 			},
 			"northTinted1": {
-				"base": "rbbg:graftedcutting/{type}-leaves1"
+				"base": "graftedcutting/{type}-leaves1"
 			},
 			"southTinted1": {
-				"base": "rbbg:graftedcutting/{type}-leaves2"
+				"base": "graftedcutting/{type}-leaves2"
 			}
 		}
 	},

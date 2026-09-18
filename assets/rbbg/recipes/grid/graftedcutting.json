@@ -48,7 +48,7 @@
 		"recipeGroup": 1,
 		"output": {
 			"type": "item",
-			"code": "rbbg:graftedcutting-{graftedon}",
+			"code": "graftedcutting-{graftedon}",
 			"attributes": {
 				"traits": "heavybearer,thickskinnedfruit"
 			}
