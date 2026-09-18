@@ -1,5 +1,5 @@
 {
-	"code": "graftedcutting",
+	"code": "dippedcutting",
 	"variantgroups": [
 		{
 			"code": "fruit",
@@ -27,16 +27,13 @@
 	},
 	"transitionableProps": [
 		{
-			"type": "Perish",
-			"freshHours": {
-				"avg": 48
-			},
+			"type": "Dry",
 			"transitionHours": {
-				"avg": 1
+				"avg": 168
 			},
 			"transitionedStack": {
-				"type": "item",
-				"code": "game:stick"
+				"type": "block",
+				"code": "game:fruitingbushcutting-{fruit}"
 			},
 			"transitionRatio": 0.25
 		}
@@ -53,10 +50,10 @@
 				"base": "game:block/plant/berrybush/cuttings/currant-stem2"
 			},
 			"northTinted1": {
-				"base": "graftedcutting/currant-leaves1"
+				"base": "dippedcutting/currant-leaves1"
 			},
 			"southTinted1": {
-				"base": "graftedcutting/currant-leaves2"
+				"base": "dippedcutting/currant-leaves2"
 			}
 		},
 		"*": {
@@ -67,10 +64,10 @@
 				"base": "game:block/plant/berrybush/cuttings/{fruit}-stem2"
 			},
 			"northTinted1": {
-				"base": "graftedcutting/{fruit}-leaves1"
+				"base": "dippedcutting/{fruit}-leaves1"
 			},
 			"southTinted1": {
-				"base": "graftedcutting/{fruit}-leaves2"
+				"base": "dippedcutting/{fruit}-leaves2"
 			}
 		}
 	},
