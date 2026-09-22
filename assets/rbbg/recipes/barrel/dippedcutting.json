@@ -4,7 +4,8 @@
 		{
 			"type": "item",
 			"code": "game:weaktanninportion",
-			"litres": 0.5
+			"litres": 0.5,
+			"consumeLitres": 0.5
 		},
 		{
 			"type": "item",
@@ -16,6 +17,6 @@
 	"output": {
 		"type": "item",
 		"code": "dippedcutting-{fruit}",
-		"stackSize": 1
+		"quantity": 1
 	}
 }
