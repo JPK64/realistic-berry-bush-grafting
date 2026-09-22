@@ -34,11 +34,11 @@ grid_template = """	{{
 			}},
 			"B": {{
 				"type": "block",
-				"code": "game:fruitingbushcutting-{{base}}-free"{0}
+				"code": "game:fruitingbushcutting-{{base}}-free"{1}
 			}},
 			"G": {{
 				"type": "block",
-				"code": "game:fruitingbushcutting-{{graftedon}}-free"{1}
+				"code": "game:fruitingbushcutting-{{graftedon}}-free"{2}
 			}},
 			"N": {{
 				"type": "block",
@@ -52,12 +52,10 @@ grid_template = """	{{
 				"compost"
 			],
 			"graftedon": [
-				"blueberry",
-				"cranberry"
+{0}
 			],
 			"base": [
-				"blueberry",
-				"cranberry"
+{0}
 			]
 		}},
 		"width": 2,
@@ -65,10 +63,12 @@ grid_template = """	{{
 		"recipeGroup": 1,
 		"output": {{
 			"type": "block",
-			"code": "graftedcutting-{{graftedon}}"{2}
+			"code": "graftedcutting-{{graftedon}}"{3}
 		}},
 		"quantity": 1
 	}}"""
+
+family_template = '				"{0}"'
 
 input_template = """,
 				"attributes": {{
@@ -92,6 +92,7 @@ if not __debug__:
 
 	barrel_template = sub(whitespace, '', barrel_template)
 	grid_template = sub(whitespace, '', grid_template)
+	family_template = sub(whitespace, '', family_template)
 
 	input_template = sub(whitespace, '', input_template)
 	output_template = sub(whitespace, '', output_template)
@@ -108,8 +109,9 @@ def format_barrel(traits):
 		format_template(traits, "", output_template)
 	)
 
-def format_grid(base, graftedon, merged):
+def format_grid(family, base, graftedon, merged):
 	return grid_template.format(
+		array_separator.join(family_template.format(member) for member in family),
 		format_template(base, "", input_template),
 		format_template(graftedon, "", input_template),
 		format_template(merged, "", output_template)

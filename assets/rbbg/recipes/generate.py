@@ -1,16 +1,16 @@
 
 
-families = [
+families = {
 	# Genus: Ribes
-	["blackcurrant", "redcurrant", "whitecurrant"],
+	"currants": ["blackcurrant", "redcurrant", "whitecurrant"],
 	# Genus: Rubus
-	["blackberry", "cloudberry", "raspberry"],
+	"brambles": ["blackberry", "cloudberry", "raspberry"],
 	# Genus: Vaccinium
-	["blueberry", "cranberry"],
+	"heathes": ["blueberry", "cranberry"],
 	# Outliers
-	["beautyberry"],
-	["strawberry"]
-]
+	"beautyberry": ["beautyberry"],
+	"strawberry": ["strawberry"]
+}
 
 pairs = [
 	# Yield
@@ -75,12 +75,13 @@ with open("barrel/fruitingbushcutting.json", "w", encoding="utf-8") as f:
 		for traits in combinations
 	))
 
-makedirs("grid", exist_ok=True)
-with open("grid/graftedcutting.json", "w", encoding="utf-8") as f:
-	f.write(format_array(
-		format_grid(base, graftedon, merged)
-		for merged in combinations
-		for [base, graftedon] in merges(merged)
-	))
+makedirs("grid/graftedcutting", exist_ok=True)
+for name in families:
+	with open(f"grid/graftedcutting/{name}.json", "w", encoding="utf-8") as f:
+		f.write(format_array(
+			format_grid(families[name], base, graftedon, merged)
+			for merged in combinations
+			for [base, graftedon] in merges(merged)
+		))
 
 
