@@ -17,6 +17,7 @@
 			]
 		}
 	],
+	"maxStackSize": 16,
 	"creativeinventory": {
 		"general": [
 			"*"
