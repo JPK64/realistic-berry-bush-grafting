@@ -1,5 +1,6 @@
 {
-	"code": "dippedcutting",
+	"code": "fruitingbushcutting",
+	"sealHours": 48,
 	"ingredients": [
 		{
 			"type": "item",
@@ -16,7 +17,7 @@
 	],
 	"output": {
 		"type": "block",
-		"code": "dippedcutting-{fruit}",
+		"code": "game:fruitingbushcutting-{fruit}-free",
 		"quantity": 1
 	}
 }
