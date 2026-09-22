@@ -1,5 +1,5 @@
 {
-	"code": "graftedcutting",
+	"code": "dippedcutting",
 	"variantgroups": [
 		{
 			"code": "fruit",
@@ -17,7 +17,31 @@
 			]
 		}
 	],
+	"behaviors": [
+		{
+			"name": "FruitingBushCutting"
+		},
+		{
+			"name": "Unplaceable"
+		}
+	],
 	"maxStackSize": 16,
+	"transitionableProps": [
+		{
+			"type": "Dry",
+			"freshHours": {
+				"avg": 0
+			},
+			"transitionHours": {
+				"avg": 168
+			},
+			"transitionedStack": {
+				"type": "block",
+				"code": "game:fruitingbushcutting-{fruit}-free"
+			},
+			"transitionRatio": 1
+		}
+	],
 	"creativeinventory": {
 		"general": [
 			"*"
@@ -26,22 +50,6 @@
 			"*"
 		]
 	},
-	"transitionableProps": [
-		{
-			"type": "Perish",
-			"freshHours": {
-				"avg": 48
-			},
-			"transitionHours": {
-				"avg": 1
-			},
-			"transitionedStack": {
-				"type": "item",
-				"code": "game:stick"
-			},
-			"transitionRatio": 0.25
-		}
-	],
 	"shape": {
 		"base": "game:block/plant/flower/1patch-cross-16x16"
 	},
@@ -54,10 +62,10 @@
 				"base": "game:block/plant/berrybush/cuttings/currant-stem2"
 			},
 			"northTinted1": {
-				"base": "graftedcutting/currant-leaves1"
+				"base": "dippedcutting/currant-leaves1"
 			},
 			"southTinted1": {
-				"base": "graftedcutting/currant-leaves2"
+				"base": "dippedcutting/currant-leaves2"
 			}
 		},
 		"*": {
@@ -68,25 +76,27 @@
 				"base": "game:block/plant/berrybush/cuttings/{fruit}-stem2"
 			},
 			"northTinted1": {
-				"base": "graftedcutting/{fruit}-leaves1"
+				"base": "dippedcutting/{fruit}-leaves1"
 			},
 			"southTinted1": {
-				"base": "graftedcutting/{fruit}-leaves2"
+				"base": "dippedcutting/{fruit}-leaves2"
 			}
 		}
 	},
-	"guiTransform": {
-		"rotation": {
-			"x": 0,
-			"y": -171,
-			"z": 180
-		},
-		"origin": {
-			"x": 0.5299,
-			"y": 0.44,
-			"z": 0.51
-		},
-		"scale": 1.5
+	"guiTransformByType": {
+		"*": {
+			"rotation": {
+				"x": 0,
+				"y": -9,
+				"z": 0
+			},
+			"origin": {
+				"x": 0.5299,
+				"y": 0.44,
+				"z": 0.51
+			},
+			"scale": 1.5
+		}
 	},
 	"tpHandTransform": {
 		"translation": {

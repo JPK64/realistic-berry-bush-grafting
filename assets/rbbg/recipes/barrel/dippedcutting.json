@@ -8,14 +8,14 @@
 			"consumeLitres": 0.5
 		},
 		{
-			"type": "item",
+			"type": "block",
 			"code": "graftedcutting-*",
 			"quantity": 1,
 			"name": "fruit"
 		}
 	],
 	"output": {
-		"type": "item",
+		"type": "block",
 		"code": "dippedcutting-{fruit}",
 		"quantity": 1
 	}

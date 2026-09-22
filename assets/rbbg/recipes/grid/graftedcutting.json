@@ -47,7 +47,7 @@
 		"height": 2,
 		"recipeGroup": 1,
 		"output": {
-			"type": "item",
+			"type": "block",
 			"code": "graftedcutting-{graftedon}",
 			"attributes": {
 				"traits": "heavybearer,thickskinnedfruit"
