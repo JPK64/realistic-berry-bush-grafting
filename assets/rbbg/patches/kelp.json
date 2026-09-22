@@ -1,0 +1,16 @@
+[
+	{
+		"file": "game:blocktypes/plant/aquatic/columnar-random.json",
+		"side": "server",
+		"op": "addmerge",
+		"path": "/dropsByType",
+		"value": {
+			"aquatic-kelp-*": [
+				{
+					"type": "block",
+					"code": "aquatic-kelp-section"
+				}
+			]
+		}
+	}
+]

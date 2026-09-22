@@ -1,0 +1,12 @@
+[
+	{
+		"file": "game:blocktypes/plant/aquatic/seaweed.json",
+		"side": "server",
+		"op": "addmerge",
+		"path": "/drops/0",
+		"value": {
+			"type": "block",
+			"code": "seaweed-section"
+		}
+	}
+]
