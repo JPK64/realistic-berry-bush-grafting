@@ -47,7 +47,6 @@ grid_template = """	{{
 		}}{4},
 		"width": 2,
 		"height": 2,
-		"recipeGroup": 1,
 		"output": {{
 			"type": "block",
 			"code": "graftedcutting-{2}"{5}
@@ -76,8 +75,7 @@ output_template = """,
 
 array_template = """[
 {0}
-]
-"""
+]"""
 array_separator = """,
 """
 
