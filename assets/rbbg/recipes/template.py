@@ -34,35 +34,36 @@ grid_template = """	{{
 			}},
 			"B": {{
 				"type": "block",
-				"code": "game:fruitingbushcutting-{{base}}-free"{1}
+				"code": "game:fruitingbushcutting-{0}-free"{1}
 			}},
 			"G": {{
 				"type": "block",
-				"code": "game:fruitingbushcutting-{{graftedon}}-free"{2}
+				"code": "game:fruitingbushcutting-{2}-free"{3}
 			}},
 			"N": {{
 				"type": "block",
 				"code": "game:seaweed-top"
 			}}
-		}},
-		"allowedVariants": {{
-			"graftedon": [
-{0}
-			],
-			"base": [
-{0}
-			]
-		}},
+		}}{4},
 		"width": 2,
 		"height": 2,
 		"recipeGroup": 1,
 		"output": {{
 			"type": "block",
-			"code": "graftedcutting-{{graftedon}}"{3}
+			"code": "graftedcutting-{2}"{5}
 		}}
 	}}"""
 
-family_template = '				"{0}"'
+variants_template = """,
+		"allowedVariants": {{
+			"base": [
+{0}
+			],
+			"graftedon": [
+{0}
+			]
+		}}"""
+variant_template = '				"{0}"'
 
 input_template = """,
 				"attributes": {{
@@ -86,7 +87,9 @@ if not __debug__:
 
 	barrel_template = sub(whitespace, '', barrel_template)
 	grid_template = sub(whitespace, '', grid_template)
-	family_template = sub(whitespace, '', family_template)
+
+	variants_template = sub(whitespace, '', variants_template)
+	variant_template = sub(whitespace, '', variant_template)
 
 	input_template = sub(whitespace, '', input_template)
 	output_template = sub(whitespace, '', output_template)
@@ -94,21 +97,26 @@ if not __debug__:
 	array_template = sub(whitespace, '', array_template)
 	array_separator = sub(whitespace, '', array_separator)
 
-def format_template(traits, empty, nonempty):
+def format_trait_template(traits, empty, nonempty):
 	return empty if len(traits) == 0 else nonempty.format(",".join(traits))
+
+def format_variant_template(variants, single, multi):
+	return single if len(variants) == 1 else multi
 
 def format_barrel(traits):
 	return barrel_template.format(
-		format_template(traits, "", input_template),
-		format_template(traits, "", output_template)
+		format_trait_template(traits, "", input_template),
+		format_trait_template(traits, "", output_template)
 	)
 
-def format_grid(family, base, graftedon, merged):
+def format_grid(variants, base, graftedon, merged):
 	return grid_template.format(
-		array_separator.join(family_template.format(member) for member in family),
-		format_template(base, "", input_template),
-		format_template(graftedon, "", input_template),
-		format_template(merged, "", output_template)
+		format_variant_template(variants, variants[0], "{base}"),
+		format_trait_template(base, "", input_template),
+		format_variant_template(variants, variants[0], "{graftedon}"),
+		format_trait_template(graftedon, "", input_template),
+		format_variant_template(variants, "", variants_template.format(array_separator.join(variant_template.format(variant) for variant in variants))),
+		format_trait_template(merged, "", output_template)
 	)
 
 def format_array(array):
