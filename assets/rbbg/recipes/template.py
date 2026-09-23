@@ -42,14 +42,10 @@ grid_template = """	{{
 			}},
 			"N": {{
 				"type": "block",
-				"code": "game:{{nutrient}}-*"
+				"code": "game:seaweed-top"
 			}}
 		}},
 		"allowedVariants": {{
-			"nutrient": [
-				"aquatic-kelp",
-				"seaweed"
-			],
 			"graftedon": [
 {0}
 			],
@@ -63,8 +59,7 @@ grid_template = """	{{
 		"output": {{
 			"type": "block",
 			"code": "graftedcutting-{{graftedon}}"{3}
-		}},
-		"quantity": 1
+		}}
 	}}"""
 
 family_template = '				"{0}"'
