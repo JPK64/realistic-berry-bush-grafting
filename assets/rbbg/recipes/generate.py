@@ -76,6 +76,7 @@ for name in families:
 			format_grid(families[name], base, graftedon, merged)
 			for merged in combinations
 			for [base, graftedon] in merges(merged)
+			if base != merged and graftedon != merged
 		))
 
 
