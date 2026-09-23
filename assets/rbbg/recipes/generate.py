@@ -1,13 +1,7 @@
-
-
 families = {
-	# Genus: Ribes
 	"currants": ["blackcurrant", "redcurrant", "whitecurrant"],
-	# Genus: Rubus
 	"brambles": ["blackberry", "cloudberry", "raspberry"],
-	# Genus: Vaccinium
-	"heathes": ["blueberry", "cranberry"],
-	# Outliers
+	"heathers": ["blueberry", "cranberry"],
 	"beautyberry": ["beautyberry"],
 	"strawberry": ["strawberry"]
 }
