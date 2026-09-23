@@ -1,10 +1,3 @@
-array_template = """[
-{0}
-]
-"""
-array_separator = """,
-"""
-
 barrel_template = """	{{
 		"code": "fruitingbushcutting",
 		"sealHours": 48,
@@ -29,56 +22,50 @@ barrel_template = """	{{
 		}}
 	}}"""
 
-grid_template_base = """	{{{{
+grid_template = """	{{
 		"ingredientPattern": "NG,KB",
-		"ingredients": {{{{
-			"K": {{{{
+		"ingredients": {{
+			"K": {{
 				"type": "item",
 				"tags": [
 					"tool-knife"
 				],
 				"isTool": true
-			}}}},
-			"B": {{{{
+			}},
+			"B": {{
 				"type": "block",
-				"code": "game:fruitingbushcutting-{{{{base}}}}-free"{{1}}
-			}}}},
-			"G": {{{{
+				"code": "game:fruitingbushcutting-{{base}}-free"{1}
+			}},
+			"G": {{
 				"type": "block",
-				"code": "game:fruitingbushcutting-{{{{graftedon}}}}-free"{{2}}
-			}}}},
-			"N": {{{{
-				{0}
-			}}}}
-		}}}},
-		"allowedVariants": {{{{{1}
+				"code": "game:fruitingbushcutting-{{graftedon}}-free"{2}
+			}},
+			"N": {{
+				"type": "block",
+				"code": "game:{{nutrient}}-*"
+			}}
+		}},
+		"allowedVariants": {{
+			"nutrient": [
+				"aquatic-kelp",
+				"seaweed"
+			],
 			"graftedon": [
-{{0}}
+{0}
 			],
 			"base": [
-{{0}}
+{0}
 			]
-		}}}},
+		}},
 		"width": 2,
 		"height": 2,
 		"recipeGroup": 1,
-		"output": {{{{
+		"output": {{
 			"type": "block",
-			"code": "graftedcutting-{{{{graftedon}}}}"{{3}}
-		}}}},
+			"code": "graftedcutting-{{graftedon}}"{3}
+		}},
 		"quantity": 1
-	}}}}"""
-
-grid_template = array_separator.join([
-	grid_template_base.format('''"type": "item",
-				"code": "game:compost"''', ""),
-	grid_template_base.format('''"type": "block",
-				"code": "game:{{nutrient}}"''', '''
-			"nutrient": [
-				"game:kelp-*",
-				"game:seaweed-*"
-			],''')
-])
+	}}"""
 
 family_template = '				"{0}"'
 
@@ -90,6 +77,13 @@ output_template = """,
 			"attributes": {{
 				"traits": "{0}"
 			}}"""
+
+array_template = """[
+{0}
+]
+"""
+array_separator = """,
+"""
 
 if not __debug__:
 	from re import sub
