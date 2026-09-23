@@ -14,7 +14,7 @@ pairs = [
 	# Nutrient Uptake
 	["weakrooted", "strongrooted"],
 	# Harvest Speed
-	["sparselyclusteredberries", "denselyclusteredberries"]
+	["weakclusteredberries", "strongclusteredberries"]
 ]
 
 def combinations():
@@ -78,5 +78,3 @@ for name in families:
 			for [base, graftedon] in merges(merged)
 			if base != merged and graftedon != merged
 		))
-
-
