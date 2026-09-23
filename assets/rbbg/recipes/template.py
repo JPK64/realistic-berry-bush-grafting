@@ -5,8 +5,8 @@ barrel_template = """	{{
 			{{
 				"type": "item",
 				"code": "game:weaktanninportion",
-				"litres": 0.5,
-				"consumeLitres": 0.5
+				"litres": 1,
+				"consumeLitres": 1
 			}},
 			{{
 				"type": "block",
