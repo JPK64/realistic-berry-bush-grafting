@@ -1,8 +1,8 @@
-Asset Copyright Notice:
+# Asset Copyright Notice
 
-Certain textures, models, or visual elements contained within this
-directory are modifications of assets originally created by Anego
-Studios for Vintage Story.
+Certain textures, models, or visual elements contained within this mod
+are modifications of assets originally created by Anego Studios for the
+game Vintage Story.
 
 - All rights to the original and modified base game assets remain the
   property of Anego Studios.
