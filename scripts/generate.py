@@ -58,9 +58,11 @@ def merges(traits):
 	return result
 
 from os import makedirs
+from pathlib import Path
+
 from template import format_barrel, format_grid, format_array
 
-recipes = "../assets/rbbg/recipes"
+recipes = Path(__file__).parent.parent / "assets/rbbg/recipes"
 combinations = combinations()
 
 makedirs(f"{recipes}/barrel", exist_ok=True)
