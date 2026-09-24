@@ -24,7 +24,7 @@ for 2 days, consuming one liter of tannin and turning it back into a
 regular old berry bush cutting with the combined traits of both input
 cuttings.
 
-### Which cuttings can be grafted onto which other csuttings
+### Which cuttings can be grafted onto which other cuttings
 
 You can always graft cuttings onto a cutting of the same type, meaning
 that you can graft strawberry bush cuttings onto other strawberry bush
