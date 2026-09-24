@@ -63,7 +63,7 @@ from template import format_barrel, format_grid, format_array
 recipes = "../assets/rbbg/recipes"
 combinations = combinations()
 
-makedirs("barrel", exist_ok=True)
+makedirs(f"{recipes}/barrel", exist_ok=True)
 with open(f"{recipes}/barrel/fruitingbushcutting.json", "w", encoding="utf-8") as f:
 	f.write(format_array(
 		format_barrel(traits)
