@@ -17,21 +17,17 @@ the rootstock), a knife and seaweed in the crafting grid like this:
 ```
 
 This will graft the scion onto the rootstock, resulting in a grafted
-cutting with the combined traits of both.
-
-The grafted cutting then has to be sealed inside a barrel of weak tannin
-for 2 days, consuming one liter of tannin and turning it back into a
-regular old berry bush cutting with the combined traits of both input
-cuttings.
+cutting with the combined traits of both. The grafted cutting then has
+to be sealed inside a barrel of weak tannin for 2 days, consuming one
+liter of tannin and turning it back into a regular old berry bush
+cutting with the combined traits of both input cuttings.
 
 ### Which cuttings can be grafted onto which other cuttings
 
-You can always graft cuttings onto a cutting of the same type, meaning
-that you can graft strawberry bush cuttings onto other strawberry bush
-cuttings.
-
-Additionally, some berry bushes belong to a similar plant family and can
-be grafted onto other cuttings from the same family, not just other
+You can always graft cuttings onto a cutting of the same type, i.e.
+strawberry cuttings onto other strawberry cuttings. Additionally, some
+berry bushes of different types belong to the same plant family and can
+be grafted onto all other cuttings from the same family, not just
 cuttings of the same type:
 
 - **Currants:** Blackcurrant, redcurrant and whitecurrant.
@@ -64,8 +60,8 @@ cluttering parts of the handbook.
 ## Planned Features
 
 - A handbook entry explaining the grafting process in-game.
-- Switch to liquid nutrients, only using weak tannin as disinfectant.
-- Add binding material.
+- Liquid nutrients instead of seaweed and weak tannin.
+- Binding material, disinfected with weak tannin.
 - A random chance that a graft fails.
 
 ## Additional Information
