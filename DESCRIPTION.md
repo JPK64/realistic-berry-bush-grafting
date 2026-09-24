@@ -5,19 +5,19 @@ somewhat realistic fashion.
 
 ## Grafting Process
 
-Combine two berry bush cuttings, a knife and seaweed in the crafting
-grid like this:
+Combine two berry bush cuttings (one being the scion, the other being
+the rootstock), a knife and seaweed in the crafting grid like this:
 
 ```
-+---------+--------------------+
-| Seaweed | Grafted-on Cutting |
-+---------+--------------------+
-| Knife   | Base Cutting       |
-+---------+--------------------+
++---------+-----------+
+| Seaweed | Scion     |
++---------+-----------+
+| Knife   | Rootstock |
++---------+-----------+
 ```
 
-This will add graft the grafted-on cutting onto the base cutting,
-resulting in a grafted cutting with the combined traits of both.
+This will graft the scion onto the rootstock, resulting in a grafted
+cutting with the combined traits of both.
 
 The grafted cutting then has to be sealed inside a barrel of weak tannin
 for 2 days, consuming one liter of tannin and turning it back into a
