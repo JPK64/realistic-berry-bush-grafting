@@ -60,7 +60,7 @@ def merges(traits):
 from os import makedirs
 from template import format_barrel, format_grid, format_array
 
-recipes = "assets/rbbg/recipes"
+recipes = "../assets/rbbg/recipes"
 combinations = combinations()
 
 makedirs("barrel", exist_ok=True)
