@@ -60,20 +60,21 @@ def merges(traits):
 from os import makedirs
 from template import format_barrel, format_grid, format_array
 
+recipes = "assets/rbbg/recipes"
 combinations = combinations()
 
 makedirs("barrel", exist_ok=True)
-with open("barrel/fruitingbushcutting.json", "w", encoding="utf-8") as f:
+with open(f"{recipes}/barrel/fruitingbushcutting.json", "w", encoding="utf-8") as f:
 	f.write(format_array(
 		format_barrel(traits)
 		for traits in combinations
 	))
 
-makedirs("grid/graftedcutting", exist_ok=True)
-for name in families:
-	with open(f"grid/graftedcutting/{name}.json", "w", encoding="utf-8") as f:
+makedirs(f"{recipes}/grid/graftedcutting", exist_ok=True)
+for name, family in families.items():
+	with open(f"{recipes}/grid/graftedcutting/{name}.json", "w", encoding="utf-8") as f:
 		f.write(format_array(
-			format_grid(families[name], base, graftedon, merged)
+			format_grid(family, base, graftedon, merged)
 			for merged in combinations
 			for [base, graftedon] in merges(merged)
 			if base != merged and graftedon != merged
