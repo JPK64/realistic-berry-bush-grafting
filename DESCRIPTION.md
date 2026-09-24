@@ -126,10 +126,10 @@ Unfortunately, that mod was not the right solution for me, mainly due to
 ### Basics
 
 When doing a graft in real-life, you try to combine two branches of some
-kind of tree or bush such that the cambium, which is the green-ish thin
-layer right beneath the bark. To do so, you remove the bark from one
-branch (the rootstock) and press another branch (the scion) onto the
-rootstock such that the cambium physically connects, and then keep them
+kind of tree or bush such that the cambium - the green-ish thin layer
+right beneath the bark - physically connects. To do so, you remove the
+bark from one branch (the rootstock) and press another branch (the
+scion) onto the rootstock such that the cambium lines up, then keep them
 pressed together until the plant heals the wound by knitting the cambium
 together.
 
