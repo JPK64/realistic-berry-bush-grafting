@@ -59,10 +59,12 @@ cluttering parts of the handbook.
 
 ## Planned Features
 
-- A handbook entry explaining the grafting process in-game.
-- Liquid nutrients instead of seaweed and weak tannin.
 - Binding material, disinfected with weak tannin.
-- A random chance that a graft fails.
+- Rooting tonic instead of just using seaweed in the crafting grid.
+  - Potentially a custom model for asealed barrel with a grafted
+    cutting, if possible.
+- A handbook entry explaining the grafting process in-game.
+- A random chance that a graft fails, if possible.
 
 ## Additional Information
 
@@ -77,7 +79,7 @@ When the game generates a berry bush, each of the four trait categories
 has a 15% chance of being applied to the berry bush. When a trait
 category is applied, the positive trait only has a 40% chance of being
 picked, while the chance of the negative trait being picked instead are
-60%. This results in a 15% * 40% = 6% chance that the positive trait of
+60%. This results in a 15% \* 40% = 6% chance that the positive trait of
 a category is applied to the bush, or a 6% ^ 4 = 0.001296% chance of all
 four positive traits being picked.
 
@@ -98,7 +100,7 @@ That is why I created this mod.
 <summary>Why not use the already existing mod?</summary>
 
 I am aware that
-[Aimli_](https://mods.vintagestory.at/show/user/61EC66E73ACA2136CEB3)
+[Aimli\_](https://mods.vintagestory.at/show/user/61EC66E73ACA2136CEB3)
 already implemented such a feature in their own
 [grafting mod](https://mods.vintagestory.at/cuttingtraitgrafting). I
 highly suggest checking that mod out if you want something more
@@ -150,8 +152,9 @@ work, you would still usually plant the grafted, dormant cutting
 directly after grafting.
 
 The graft can also rot. While sealing it is one way to prevent that from
-happening, disinfecting the binding is also an option. Weak tannin is a
-way to do this (though strong tanning would kill the plant).
+happening, disinfecting the binding or washing the grafted plant with an
+antiseptic can help prevent this. Tannin is a way to do this, but only
+the weak variant as strong tannin would kill the plant.
 
 ### Modern
 
@@ -162,9 +165,16 @@ stem stays exposed to air (so the plant does not suffocate) and
 sunlight, the plant will grow roots and pick up nutrients from the
 water.
 
+To create the nutrient-infused water, compost, seaweed or kelp are used.
+Especially seaweed is packed with natural plant growth hormones like
+cytokinins that stimulate root growth and cell divsion.
+
 ### Mod
 
 This mod combines bronze-age technologies with modern hydroponic
 propagation to make the bench-grafting process interesting and engaging.
+While modern ways of creating a rooting tonic don't really fit into the
+game, sealing compost, seaweed or kelp in a barrel to create it can be a
+way to create a kind of crude rooting tonic.
 </details>
 </p>
