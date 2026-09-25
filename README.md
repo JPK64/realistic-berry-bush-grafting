@@ -14,8 +14,9 @@ into the game, making them more trustworthy to players.
 
 As there are a lot of possible trait combinations and even more ways to
 get these combinations by grafting two cuttings, the recipe files are
-not checked into this repository. Instead, a Python script is provided
-to generate these recipe files:
+huge and thus not checked into this repository - especially because
+writing these manually would take ages. Instead, a Python script is
+provided to generate these recipe files:
 
 ```sh
 python scripts/generate.py
@@ -24,5 +25,5 @@ python scripts/generate.py
 ## Contribution
 
 Have a bug, suggestion or feature request? Feel free to open an issue on
-this repository! Want to provide your own JSON files or assets to this
-repository? Fork it and open a pull request!
+this repository! Want to provide your own translations or other assets
+to this repository? Fork it and open a pull request!
