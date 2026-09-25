@@ -6,14 +6,14 @@
 			"states": [
 				"beautyberry",
 				"blackberry",
+				"blackcurrant",
 				"blueberry",
 				"cloudberry",
 				"cranberry",
-				"blackcurrant",
 				"raspberry",
 				"redcurrant",
-				"whitecurrant",
-				"strawberry"
+				"strawberry",
+				"whitecurrant"
 			]
 		}
 	],
