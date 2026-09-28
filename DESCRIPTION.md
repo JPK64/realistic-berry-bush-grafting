@@ -1,33 +1,45 @@
 # Realistic Berry Bush Grafting
 
-This is a mod that allows you to combine berry bush graftings in a
-somewhat realistic fashion.
+Allows you to combine the traits of berry bush graftings in a somewhat
+realistic fashion.
 
 ## Grafting Process
 
 Combine two berry bush cuttings (one being the scion, the other being
-the rootstock), a knife and seaweed in the crafting grid like this:
+the rootstock), a knife and disinfected bindings in the crafting grid
+like this:
 
 ```
 +---------+-----------+
-| Seaweed | Scion     |
+| Binding | Scion     |
 +---------+-----------+
 | Knife   | Rootstock |
 +---------+-----------+
 ```
 
 This will graft the scion onto the rootstock, resulting in a grafted
-cutting with the combined traits of both. The grafted cutting then has
-to be sealed inside a barrel of weak tannin for 2 days, consuming one
-liter of tannin and turning it back into a regular old berry bush
-cutting with the combined traits of both input cuttings.
+cutting of the same berry type as the scion with the combined traits of
+both input cuttings.
+
+You can create disinfected bindings by putting dry grass into a barrel
+of weak tannin which will instantly turn the dry grass into bindings.
+
+This grafted cutting cannot be planted yet, however, as the rootstock
+cannot transport any nutrients or water to the scion yet. The wound has
+to heal, and the rootstock has to sprout roots, so the next step is
+sealing the grafted cutting in a barrel of rooting tonic for 7 days.
+You can create rooting tonic by sealing either compost, seaweed or kelp
+in a barrel of water for 3 days.
+
+Once the grafted cutting has grown roots, it will turn back into a
+regular berry bush cutting.
 
 ### Which cuttings can be grafted onto which other cuttings
 
-You can always graft cuttings onto a cutting of the same type, i.e.
-strawberry cuttings onto other strawberry cuttings. Additionally, some
-berry bushes of different types belong to the same plant family and can
-be grafted onto all other cuttings from the same family, not just
+You can always graft cuttings onto another cutting of the same type,
+i.e. beautyberry cuttings onto other beautyberry cuttings. Additionally,
+some berry bushes of different types belong to the same plant family and
+can be grafted onto all other cuttings from the same family, not just
 cuttings of the same type:
 
 - **Currants:** Blackcurrant, redcurrant and whitecurrant.
@@ -59,10 +71,8 @@ cluttering parts of the handbook.
 
 ## Planned Features
 
-- Binding material, disinfected with weak tannin.
-- Rooting tonic instead of just using seaweed in the crafting grid.
-  - Potentially a custom model for asealed barrel with a grafted
-    cutting, if possible.
+- Potentially a custom model for a sealed barrel with a grafted cutting,
+  if possible.
 - A handbook entry explaining the grafting process in-game.
 - A random chance that a graft fails, if possible.
 
