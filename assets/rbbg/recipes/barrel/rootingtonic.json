@@ -1,0 +1,52 @@
+[
+	{
+		"code": "rootingtonic",
+		"sealHours": 72,
+		"ingredients": [
+			{
+				"type": "item",
+				"code": "game:waterportion",
+				"litres": 10
+			},
+			{
+				"type": "block",
+				"code": "game:{nutrient}",
+				"quantity": 1
+			}
+		],
+		"allowedVariants": {
+			"nutrient": [
+				"seaweed-section",
+				"seaweed-top",
+				"aquatic-kelp-section",
+				"aquatic-kelp-top"
+			]
+		},
+		"output": {
+			"type": "block",
+			"code": "rootingtonicportion",
+			"litres": 10
+		}
+	},
+	{
+		"code": "rootingtonic",
+		"sealHours": 72,
+		"ingredients": [
+			{
+				"type": "item",
+				"code": "game:waterportion",
+				"litres": 50
+			},
+			{
+				"type": "item",
+				"code": "game:compost",
+				"quantity": 1
+			}
+		],
+		"output": {
+			"type": "block",
+			"code": "rootingtonicportion",
+			"litres": 50
+		}
+	}
+]
