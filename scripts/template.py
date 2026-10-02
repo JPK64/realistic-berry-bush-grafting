@@ -4,7 +4,7 @@ barrel_template = """	{{
 		"ingredients": [
 			{{
 				"type": "item",
-				"code": "game:weaktanninportion",
+				"code": "rootingtonicportion",
 				"litres": 1,
 				"consumeLitres": 1
 			}},
