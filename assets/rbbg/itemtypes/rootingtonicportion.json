@@ -1,0 +1,80 @@
+{
+	"code": "rootingtonicportion",
+	"class": "ItemLiquidPortion",
+	"matterState": "liquid",
+	"maxstacksize": 5000,
+	"attributes": {
+		"handbook": {
+			"ignoreCreativeInvStacks": true
+		},
+		"waterTightContainerProps": {
+			"containable": true,
+			"itemsPerLitre": 100,
+			"texture": {
+				"base": "rootingtonic"
+			},
+			"allowSpill": true,
+			"whenSpilled": {
+				"action": "DropContents",
+				"stack": {
+					"type": "item",
+					"code": "rootingtonicportion"
+				}
+			}
+		}
+	},
+	"creativeinventoryStacks": [
+		{
+			"tabs": [
+				"general",
+				"liquids"
+			],
+			"stacks": [
+				{
+					"type": "block",
+					"code": "woodbucket",
+					"attributes": {
+						"ucontents": [
+							{
+								"type": "item",
+								"code": "rootingtonicportion",
+								"makefull": true
+							}
+						]
+					}
+				}
+			]
+		}
+	],
+	"shape": {
+		"base": "game:item/liquid"
+	},
+	"texture": {
+		"base": "rootingtonic"
+	},
+	"guiTransform": {
+		"translation": {
+			"x": 0,
+			"y": 1,
+			"z": 0
+		},
+		"rotation": {
+			"x": 123,
+			"y": -33,
+			"z": -13
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 1.4
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.5,
+			"y": -1,
+			"z": -1.4
+		}
+	}
+}
