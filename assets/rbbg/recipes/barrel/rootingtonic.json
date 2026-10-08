@@ -23,7 +23,7 @@
 			]
 		},
 		"output": {
-			"type": "block",
+			"type": "item",
 			"code": "rootingtonicportion",
 			"litres": 10
 		}
@@ -44,7 +44,7 @@
 			}
 		],
 		"output": {
-			"type": "block",
+			"type": "item",
 			"code": "rootingtonicportion",
 			"litres": 50
 		}
