@@ -32,7 +32,7 @@
 			"stacks": [
 				{
 					"type": "block",
-					"code": "woodbucket",
+					"code": "game:woodbucket",
 					"attributes": {
 						"ucontents": [
 							{
