@@ -1,6 +1,6 @@
 barrel_template = """	{{
 		"code": "fruitingbushcutting",
-		"sealHours": 48,
+		"sealHours": 168,
 		"ingredients": [
 			{{
 				"type": "item",
