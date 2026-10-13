@@ -26,6 +26,7 @@
 		}
 	],
 	"maxStackSize": 16,
+	"materialDensity": 200,
 	"combustibleProps": {
 		"burnTemperature": 600,
 		"burnDuration": 2

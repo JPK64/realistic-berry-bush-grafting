@@ -3,6 +3,7 @@
 	"class": "ItemLiquidPortion",
 	"matterState": "liquid",
 	"maxstacksize": 5000,
+	"materialDensity": 200,
 	"attributes": {
 		"handbook": {
 			"ignoreCreativeInvStacks": true
