@@ -28,7 +28,7 @@ def combinations():
 
 	return result
 
-def trait_merges(traits, pair):
+def combinations_for_trait(traits, pair):
 	[negative, positive] = pair
 	return [
 		[negative, negative],
@@ -44,15 +44,15 @@ def trait_merges(traits, pair):
 		[negative, positive]
 	]
 
-def merges(traits):
+def combinations_for_traits(traits):
 	result = [[[], []]]
 	for pair in pairs:
 		result = [
 			[
-				first + ([] if f is None else [f]),
-				second + ([] if s is None else [s])
-			] for [first, second] in result
-			for [f, s] in trait_merges(traits, pair)
+				rootstock + ([] if r is None else [r]),
+				scion + ([] if s is None else [s])
+			] for [rootstock, scion] in result
+			for [r, s] in combinations_for_trait(traits, pair)
 		]
 
 	return result
@@ -76,8 +76,8 @@ makedirs(f"{recipes}/grid/graftedcutting", exist_ok=True)
 for name, family in families.items():
 	with open(f"{recipes}/grid/graftedcutting/{name}.json", "w", encoding="utf-8") as f:
 		f.write(format_array(
-			format_grid(family, base, graftedon, merged)
-			for merged in combinations
-			for [base, graftedon] in merges(merged)
-			if base != merged and graftedon != merged
+			format_grid(family, rootstock, scion, grafted)
+			for grafted in combinations
+			for [rootstock, scion] in combinations_for_traits(grafted)
+			if rootstock != grafted and scion != grafted
 		))

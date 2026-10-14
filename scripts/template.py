@@ -23,7 +23,7 @@ barrel_template = """	{{
 	}}"""
 
 grid_template = """	{{
-		"ingredientPattern": "NG,KB",
+		"ingredientPattern": "BS,KR",
 		"ingredients": {{
 			"K": {{
 				"type": "item",
@@ -32,17 +32,17 @@ grid_template = """	{{
 				],
 				"isTool": true
 			}},
-			"B": {{
+			"R": {{
 				"type": "block",
 				"code": "game:fruitingbushcutting-{0}-free"{1}
 			}},
-			"G": {{
+			"S": {{
 				"type": "block",
 				"code": "game:fruitingbushcutting-{2}-free"{3}
 			}},
-			"N": {{
-				"type": "block",
-				"code": "game:seaweed-top"
+			"B": {{
+				"type": "item",
+				"code": "graftingstrips"
 			}}
 		}}{4},
 		"width": 2,
@@ -55,10 +55,10 @@ grid_template = """	{{
 
 variants_template = """,
 		"allowedVariants": {{
-			"base": [
+			"rootstock": [
 {0}
 			],
-			"graftedon": [
+			"scion": [
 {0}
 			]
 		}}"""
@@ -107,14 +107,14 @@ def format_barrel(traits):
 		format_trait_template(traits, "", output_template)
 	)
 
-def format_grid(variants, base, graftedon, merged):
+def format_grid(variants, rootstock, scion, grafted):
 	return grid_template.format(
-		format_variant_template(variants, variants[0], "{base}"),
-		format_trait_template(base, "", input_template),
-		format_variant_template(variants, variants[0], "{graftedon}"),
-		format_trait_template(graftedon, "", input_template),
+		format_variant_template(variants, variants[0], "{rootstock}"),
+		format_trait_template(rootstock, "", input_template),
+		format_variant_template(variants, variants[0], "{scion}"),
+		format_trait_template(scion, "", input_template),
 		format_variant_template(variants, "", variants_template.format(array_separator.join(variant_template.format(variant) for variant in variants))),
-		format_trait_template(merged, "", output_template)
+		format_trait_template(grafted, "", output_template)
 	)
 
 def format_array(array):
