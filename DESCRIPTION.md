@@ -5,38 +5,41 @@ realistic fashion.
 
 ## Grafting Process
 
-Combine two berry bush cuttings (one being the scion, the other being
-the rootstock), a knife and disinfected bindings in the crafting grid
-like this:
+First you will need grafting strips to even make a graft. You can create
+them by disinfecting flax fibers, dry grass, kelp or seaweed in either
+weak tannin, strong tannin or aqua vitae. The bindings do not need to be
+sealed, simply dipping them in an appropriate disinfectant is enough.
+
+Additionally, you need to create a rooting tonic by putting seaweed or
+kelp into 10l of water, or compost into 50l of water, which will turn
+the water into rooting tonic after sealing for 3 days.
+
+You can then graft one berry bush cutting, that being the scion, onto 
+another berry bush cutting, called the rootstock. To do so, add both to
+the crafting grid, along with a knife and the aforementioned grafting
+strips like this:
 
 ```
-+---------+-----------+
-| Binding | Scion     |
-+---------+-----------+
-| Knife   | Rootstock |
-+---------+-----------+
++--------+-----------+
+| Strips | Scion     |
++--------+-----------+
+| Knife  | Rootstock |
++--------+-----------+
 ```
 
-This will graft the scion onto the rootstock, resulting in a grafted
-cutting of the same berry type as the scion with the combined traits of
-both input cuttings.
+The grafted cutting obtained through this process will be of the same
+berry type as the scion with the combined traits of both input cuttings.
+It cannot be planted yet, however, as the rootstock cannot transport any
+nutrients or water to the scion yet. The wound has to heal and the
+cutting has to sprout roots, so the next step is sealing the cutting in
+a barrel containing at least 1l of rooting tonic for 7 days.
 
-You can create disinfected bindings by putting dry grass into a barrel
-of weak tannin which will instantly turn the dry grass into bindings.
-
-This grafted cutting cannot be planted yet, however, as the rootstock
-cannot transport any nutrients or water to the scion yet. The wound has
-to heal, and the rootstock has to sprout roots, so the next step is
-sealing the grafted cutting in a barrel of rooting tonic for 7 days.
-You can create rooting tonic by sealing either compost, seaweed or kelp
-in a barrel of water for 3 days.
-
-Once the grafted cutting has grown roots, it will turn back into a
-regular berry bush cutting.
+After this process, the grafted cutting will turn back into a regular
+berry bush cutting, ready to be planted.
 
 ### Which cuttings can be grafted onto which other cuttings
 
-You can always graft cuttings onto another cutting of the same type,
+You can always graft a cutting onto another cutting of the same type,
 i.e. beautyberry cuttings onto other beautyberry cuttings. Additionally,
 some berry bushes of different types belong to the same plant family and
 can be grafted onto all other cuttings from the same family, not just
@@ -58,10 +61,10 @@ cuttings of the same type:
 
 ## Caveats
 
-Due to the way the game works, this mod has to add 26,960 grid recipes
-and 81 barrel recipes to the game. On somewhat good hardware, this will
-add about 30 seconds of loading when entering a world or starting a
-server.
+Due to the way the game works, this mod has to add at least 26,960 grid
+recipes and 81 barrel recipes to the game. On somewhat good hardware,
+this will add about 30 seconds of loading when entering a world or
+starting a server.
 
 Additionally, while the game does group recipes with the same berry bush
 traits in the handbook, I could not find a way to make the game further
@@ -74,7 +77,7 @@ cluttering parts of the handbook.
 - Potentially a custom model for a sealed barrel with a grafted cutting,
   if possible.
 - A handbook entry explaining the grafting process in-game.
-- A random chance that a graft fails, if possible.
+- A random chance that a graft fails.
 
 ## Additional Information
 
@@ -96,8 +99,10 @@ four positive traits being picked.
 To find a perfect berry bush, you have to check about 77,000 berry
 bushes on average. To 99% guarantee a perfect berry bush cutting, you
 have to check about 355,000 berry bushes. And that is only for one of
-the berries, and even if you do find such a berry bush, propagating it
-will still take several in-game years.
+the berries, as there are multiple kinds of berry bushes. And even if
+you do find such a berry bush, propagating it will still take several
+in-game years due to the 12 month cooldown applied to the bush when
+taking a cutting.
 
 I am a fan of realistic and somewhat challenging game mechanics. I am
 not a fan of basically being unable to guarantee the perfect outcome.
@@ -138,8 +143,9 @@ kind of tree or bush such that the cambium - the green-ish thin layer
 right beneath the bark - physically connects. To do so, you remove the
 bark from one branch (the rootstock) and press another branch (the
 scion) onto the rootstock such that the cambium lines up, then keep them
-pressed together until the plant heals the wound by knitting the cambium
-together.
+pressed together using some kind of binding until the plant heals the
+wound by knitting the cambium together, as otherwise the rootstock
+cannot transport any nutrients to the scion and the scion will die.
 
 ### Bronze Age
 
@@ -163,8 +169,8 @@ directly after grafting.
 
 The graft can also rot. While sealing it is one way to prevent that from
 happening, disinfecting the binding or washing the grafted plant with an
-antiseptic can help prevent this. Tannin is a way to do this, but only
-the weak variant as strong tannin would kill the plant.
+antiseptic can also help prevent this. You can do this with alcohol, but
+tannin is a great disinfectant as well.
 
 ### Modern
 
