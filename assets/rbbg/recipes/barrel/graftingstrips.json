@@ -1,0 +1,68 @@
+[
+	{
+		"code": "graftingstrips",
+		"ingredients": [
+			{
+				"type": "item",
+				"code": "game:{disinfectant}",
+				"litres": 1,
+				"consumeLitres": 1
+			},
+			{
+				"type": "block",
+				"code": "game:{binding}",
+				"quantity": 4
+			}
+		],
+		"allowedVariants": {
+			"disinfectant": [
+				"weaktanninportion",
+				"strongtanninportion",
+				"alcoholportion"
+			],
+			"binding": [
+				"seaweed-section",
+				"seaweed-top",
+				"aquatic-kelp-section",
+				"aquatic-kelp-top"
+			]
+		},
+		"output": {
+			"type": "item",
+			"code": "graftingstrips",
+			"quantity": 4
+		}
+	},
+	{
+		"code": "graftingstrips",
+		"ingredients": [
+			{
+				"type": "item",
+				"code": "game:{disinfectant}",
+				"litres": 1,
+				"consumeLitres": 1
+			},
+			{
+				"type": "item",
+				"code": "game:{binding}",
+				"quantity": 4
+			}
+		],
+		"allowedVariants": {
+			"disinfectant": [
+				"weaktanninportion",
+				"strongtanninportion",
+				"alcoholportion"
+			],
+			"binding": [
+				"drygrass",
+				"flaxfibers"
+			]
+		},
+		"output": {
+			"type": "item",
+			"code": "graftingstrips",
+			"quantity": 4
+		}
+	}
+]
