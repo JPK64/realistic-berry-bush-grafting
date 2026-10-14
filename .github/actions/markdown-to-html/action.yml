@@ -1,0 +1,26 @@
+name: Convert Markdown to HTML
+
+inputs:
+  markdown-file:
+    description: Path to the markdown file to convert
+    required: true
+  html-file:
+    description: Path to the file to write the HTML output to
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Convert Markdown to HTML
+      shell: bash
+      env:
+        TOKEN: ${{ github.token }}
+      run: >
+        cat ${{ inputs.markdown-file }} |
+        curl -X POST
+          -H "Authorization: Bearer $GITHUB_TOKEN"
+          -H "Accept: text/html"
+          -H "Content-Type: application/json"
+          "https://api.github.com/markdown"
+          -d "$(jq -n --arg text "$MARKDOWN" '{text: $text, mode: "gfm", context: "${{ github.repository }}"}')"
+          -o ${{ inputs.html-file }}
