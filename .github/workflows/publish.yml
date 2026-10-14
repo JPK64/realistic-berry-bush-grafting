@@ -17,22 +17,25 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Convert DESCRIPTION.md to DESCRIPTION.html
+      - name: Remove lines up to first Heading2 from DESCRIPTION.md
+        run: sed -n '/##[^#]/,$p' DESCRIPTION.md > DESCRIPTION.tmp.md
+
+      - name: Convert DESCRIPTION.tmp.md to description.html
         uses: ./.github/actions/markdown-to-html
         with:
-          markdown-file: DESCRIPTION.md
-          html-file: DESCRIPTION.html
+          markdown-file: DESCRIPTION.tmp.md
+          html-file: description.html
 
       - name: Write Changelog to CHANGELOG.md
         env:
           MARKDOWN: ${{ github.event.release.body }}
         run: cat > CHANGELOG.md <<< "$MARKDOWN"
 
-      - name: Convert CHANGELOG.md to CHANGELOG.html
+      - name: Convert CHANGELOG.md to changelog.html
         uses: ./.github/actions/markdown-to-html
         with:
           markdown-file: CHANGELOG.md
-          html-file: CHANGELOG.html
+          html-file: changelog.html
 
       - name: Download Release
         env:
@@ -44,7 +47,6 @@ jobs:
           "${{ github.event.release.assets[0].url }}"
           -o rbbg-${{ github.event.release.tag_name }}.zip
 
-
       # In the future, the artifact publishing might be replaced with a proper upload to the Vintage Story Mod DB JSON
       # API prepared below. However, this requires https://github.com/anegostudios/vsmoddb/issues/18 to be implemented.
       - name: Publish Release
@@ -52,8 +54,8 @@ jobs:
         with:
           name: release
           path: |
-            DESCRIPTION.html
-            CHANGELOG.html
+            description.html
+            changelog.html
             rbbg-${{ github.event.release.tag_name }}.zip
         # env:
         #   TOKEN: ${{ secrets.MODDB_TOKEN }}
