@@ -25,12 +25,13 @@ jobs:
         run: python scripts/generate.py
 
       - name: Package Mod
-        run: >-
-          zip -r rbbg-${{ github.ref_name }}.zip
-            assets
-            modinfo.json
-            LICENSE.md
-            NOTICE.md
+        run: >
+          zip -r
+          rbbg-${{ github.ref_name }}.zip
+          assets
+          modinfo.json
+          LICENSE.md
+          NOTICE.md
 
       - name: Draft Release
         uses: softprops/action-gh-release@v2
