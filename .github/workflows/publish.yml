@@ -2,7 +2,8 @@ name: Publish Mod to Vintage Story Mod DB
 
 on:
   release:
-    types: [published]
+    types:
+      - published
 
 jobs:
   publish:
@@ -17,12 +18,6 @@ jobs:
           markdown-file: DESCRIPTION.md
           html-file: DESCRIPTION.html
 
-      - name: Publish DESCRIPTION.html
-        uses: actions/upload-artifact@v4
-        with:
-          name: description
-          path: DESCRIPTION.html
-
       - name: Write Changelog to CHANGELOG.md
         env:
           MARKDOWN: ${{ github.event.release.body }}
@@ -34,33 +29,33 @@ jobs:
           markdown-file: CHANGELOG.md
           html-file: CHANGELOG.html
 
-      - name: Publish CHANGELOG.html
+      - name: Download Release
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >
+          curl -L
+          -H "Authorization: Bearer $TOKEN"
+          -H "Accept: application/octet-stream"
+          "${{ github.event.release.assets[0].url }}"
+          -o rbbg-${{ github.event.release.tag_name }}.zip
+
+
+      # In the future, the artifact publishing might be replaced with a proper upload to the Vintage Story Mod DB JSON
+      # API prepared below. However, this requires https://github.com/anegostudios/vsmoddb/issues/18 to be implemented.
+      - name: Publish Release
         uses: actions/upload-artifact@v4
         with:
-          name: changelog
-          path: CHANGELOG.html
-
-      # In the future, the artifact publishing above might be replaced with a proper upload to the Vintage Story Mod DB
-      # JSON API prepared in the steps below. However, this requires https://github.com/anegostudios/vsmoddb/issues/18
-      # to be implemented.
-
-      # - name: Download Release
-      #   env:
-      #     TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   run: >
-      #     curl -L
-      #     -H "Authorization: token $TOKEN"
-      #     -H "Accept: application/octet-stream"
-      #     "${{ github.event.release.assets[0].url }}"
-      #     -o rbbg-${{ github.ref_name }}.zip
-      
-      # - name: Publish Release
-      #   env:
-      #     TOKEN: ${{ secrets.MODDB_TOKEN }}
-      #   run: >
-      #     curl
-      #     -H "Authorization: Bearer $TOKEN"
-      #     -F file=@rbbg-${{ github.ref_name }}.zip
-      #     -F "gameversions[]=1.22"
-      #     --form-string changelog=@CHANGELOG.html
-      #     https://mods.vintagestory.at/api/v2/mods/rbbg/releases
+          name: release
+          path: |
+            DESCRIPTION.html
+            CHANGELOG.html
+            rbbg-${{ github.event.release.tag_name }}.zip
+        # env:
+        #   TOKEN: ${{ secrets.MODDB_TOKEN }}
+        # run: >
+        #   curl
+        #   -H "Authorization: Bearer $TOKEN"
+        #   -F file=@rbbg-${{ github.ref_name }}.zip
+        #   -F "gameversions[]=1.22"
+        #   --form-string changelog=@CHANGELOG.html
+        #   https://mods.vintagestory.at/api/v2/mods/rbbg/releases
