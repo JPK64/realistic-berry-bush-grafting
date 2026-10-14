@@ -1,4 +1,5 @@
 __pycache__
+.venv
 
 assets/rbbg/recipes/grid/graftedcutting
 assets/rbbg/recipes/barrel/fruitingbushcutting.json

@@ -16,7 +16,7 @@ runs:
       env:
         TOKEN: ${{ github.token }}
       run: >
-        cat ${{ inputs.markdown-file }} |
+        cat "${{ inputs.markdown-file }}" |
         jq -Rs '{text: ., mode: "gfm", context: "${{ github.repository }}"}' |
         curl -X POST
         -H "Authorization: Bearer $TOKEN"
@@ -24,4 +24,7 @@ runs:
         -H "Content-Type: application/json"
         "https://api.github.com/markdown"
         --data-binary @-
-        -o ${{ inputs.html-file }}
+        -o "${{ inputs.html-file }}"
+
+    - name: Prepare HTML for Vintage Story Mod DB
+      run: python scripts/prepare-html.py "${{ inputs.html-file }}"
